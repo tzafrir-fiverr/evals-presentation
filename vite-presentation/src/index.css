@@ -1,0 +1,57 @@
+/* Prism.js theme for dark backgrounds */
+@import 'prismjs/themes/prism-tomorrow.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Override Prism styles to work with our dark theme */
+pre[class*="language-"] {
+  background: transparent !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+code[class*="language-"] {
+  background: transparent !important;
+}
+
+/* Smooth scrolling improvements */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Better scroll performance */
+.scroll-container {
+  -webkit-overflow-scrolling: touch;
+  scroll-behavior: smooth;
+  overscroll-behavior: contain;
+}
+
+/* Disable scroll-snap during programmatic scrolling */
+.scroll-container.scrolling {
+  scroll-snap-type: none !important;
+}
+
+/* Improve rendering performance */
+.slide-container {
+  will-change: transform;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+}
+
+/* Speaker Notes Animation */
+@keyframes fadeInSlide {
+  from {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeInSlide 0.3s ease-out;
+}
