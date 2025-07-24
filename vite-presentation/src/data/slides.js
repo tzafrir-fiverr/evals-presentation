@@ -8,6 +8,44 @@ export const slides = [
   },
   {
     id: 2,
+    title: "The Problem",
+    type: "problem",
+    content: {
+      current: {
+        title: "What is an Evaluation (Eval)?",
+        items: [
+          { text: "Automated testing specifically designed for LLM outputs", icon: "🎯" },
+          { text: "Measures accuracy, quality, and consistency at scale", icon: "📊" },
+          { text: "Runs hundreds of test cases in minutes, not hours", icon: "⚡" },
+          { text: "Provides objective metrics for subjective outputs", icon: "📈" }
+        ]
+      },
+      needed: {
+        title: "Why Use an Eval Framework?",
+        items: [
+          { text: "Focus on your test cases, not infrastructure", icon: "✅" },
+          { text: "Built-in grading strategies (exact match, AI judge, custom)", icon: "✅" },
+          { text: "Automatic metrics, visualizations, and reports", icon: "✅" },
+          { text: "Start evaluating in 30 minutes, not 3 weeks", icon: "✅" }
+        ]
+      },
+      insight: {
+        title: "The Key Insight",
+        point: "Evals transform LLM development from art to engineering—systematic, measurable, and repeatable"
+      },
+      cost: {
+        title: "Without a Framework, You'll Need To",
+        items: [
+          "Write custom test harnesses and data loaders",
+          "Build your own grading logic and metrics", 
+          "Manage API calls, rate limits, and retries",
+          "Create visualization and reporting tools"
+        ]
+      }
+    }
+  },
+  {
+    id: 3,
     title: "The Reality: Most LLM Features Fail Silently",
     type: "problem",
     content: {
@@ -44,7 +82,7 @@ export const slides = [
     }
   },
   {
-    id: 3,
+    id: 4,
     title: "Three Evaluation Strategies",
     type: "levels",
     content: {
@@ -75,7 +113,7 @@ export const slides = [
     }
   },
   {
-    id: 4,
+    id: 5,
     title: "Level 1: Exact Match Evaluations",
     subtitle: "Example: News Categorization",
     type: "example",
@@ -109,7 +147,7 @@ Headline: {headline}`,
     }
   },
   {
-    id: 5,
+    id: 6,
     title: "Level 1: Implementation",
     type: "code",
     content: {
@@ -164,7 +202,7 @@ run = client.evals.runs.create(
     }
   },
   {
-    id: 6,
+    id: 7,
     title: "Level 2: Model-as-Judge Evaluations",
     subtitle: "Example: Customer Service Writing Quality",
     type: "example",
@@ -215,7 +253,7 @@ Is this a GOOD or BAD customer service response?"""
     }
   },
   {
-    id: 7,
+    id: 8,
     title: "Level 2: Implementation",
     type: "code",
     content: {
@@ -292,7 +330,7 @@ run = client.evals.runs.create(
     }
   },
   {
-    id: 8,
+    id: 9,
     title: "Level 3: Custom Python Evaluations",
     subtitle: "Example: Number Decomposition",
     type: "example",
@@ -327,7 +365,7 @@ def grade(sample, item):
     }
   },
   {
-    id: 9,
+    id: 10,
     title: "Level 3: Implementation",
     type: "code",
     content: {
@@ -388,7 +426,7 @@ response_format = {
     }
   },
   {
-    id: 10,
+    id: 11,
     title: "The Development Process That Works",
     subtitle: "Data-Driven Iteration",
     type: "process",
